@@ -12,11 +12,11 @@ class PhotosController < ApplicationController
     Photo.create(photo_params)
     redirect_to '/photos'
   end
-
+  
   private
 
   def photo_params
-    param.require(:photo).permit(:image)
+    params.require(:photo).permit(:image)
   end
 
 end
